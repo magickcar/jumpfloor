@@ -1,0 +1,21 @@
+//今天用c++实现经典的跳台阶函数
+//如果一次可以跳上1级台阶，也可以跳上2级。求该跳上一个n级的台阶总共有多少种跳法
+//例如10级
+#include <iostream>
+using namespace std;
+class Solution {
+public:
+    int jumpFloor(int number) {
+        if(number<=2)
+            return number;
+        else
+            return jumpFloor(number-1)+jumpFloor(number-2);
+    }
+};
+int main()
+{
+  Solution a;
+  a.jumpFloor(10);
+  system("pause");
+  return 0;
+}
